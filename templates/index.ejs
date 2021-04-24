@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gameItem {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 5px 10px 10px #e8f5ee;
+            height: 100px;
+        }
+
+        .unmatched {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header class="row">
+            <% -include('partials/header.ejs')%>
+        </header>
+        <div id="app">
+            <section class="row" id="board">
+                <div class="col-2 gameItem m-2 p1 text-center">
+                    <img src="./images/1.png" alt="" class="img-fluid">
+                </div>
+            </section>
+            <section class="row">
+                <div class="col" id="reset">
+                    <hr>
+                    <button class="btn btn-primary" id="reset">Reset Game</button>
+                    <button class="btn btn-danger" id="cancel">Cancel Game</button>
+                </div>
+            </section>
+        </div>
+
+
+        <footer class="row">
+            <% -include('partials/footer.ejs') %>
+        </footer>
+    </main>
+    <script src="assets/main.bundle.js"></script>
+    <script src="assets/vendors~main.chunk.js"></script>
+    <% -include('partials/foot.ejs') %>
+</body>
+
+</html>
